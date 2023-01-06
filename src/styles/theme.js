@@ -16,6 +16,7 @@ export default {
 
     GRAY_INPUT: "#262529",
     GRAY: "#948F99",
+    GRAY_100: " #999591",
     BLACK: "#0D0C0F",
 
     RED: "#FF002E",

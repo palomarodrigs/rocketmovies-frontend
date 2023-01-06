@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.button`
   width: 100%;
   background-color: ${({ theme }) => theme.COLORS.PINK};
-  color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_BLACK};
 
   height: 56px;
   border: 0;
@@ -15,4 +15,4 @@ export const Container = styled.button`
   &:disabled {
     opacity: 0.5;
   }
-`
+`;

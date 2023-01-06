@@ -70,6 +70,9 @@ export const Container = styled.div`
 
     > div:nth-child(4) {
       margin: 40px 0;
+      > span {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+      }
     }
 
     p {

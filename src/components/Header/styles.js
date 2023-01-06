@@ -53,11 +53,3 @@ export const Profile = styled.div`
     margin-left: 115px;
   }
 `;
-
-// export const Logout = styled.button`
-//   background: none;
-//   color: ${({ theme }) => theme.COLORS.GRAY};
-
-//   border: none;
-//   font-size: 16px;
-// `;
