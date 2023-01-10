@@ -6,6 +6,8 @@ export const Container = styled.header`
   width: 100%;
   height: 116px;
 
+  align-items: center;
+
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: ${({ theme }) => theme.COLORS.BORDER};
@@ -26,7 +28,7 @@ export const Container = styled.header`
     margin: 10px 0;
 
     input {
-      width: 700px;
+      width: 630px;
     }
   }
 `;

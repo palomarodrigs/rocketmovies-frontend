@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     * {
@@ -12,6 +12,8 @@ export default createGlobalStyle`
         color: ${({ theme }) => theme.COLORS.WHITE};
 
         -webkit-font-smoothing: antialiased;
+
+        overflow: hidden;
     }
 
     body, input, button, textarea {
@@ -32,4 +34,15 @@ export default createGlobalStyle`
     button:hover, a:hover {
         filter: brightness(0.9)
     }
-`
+
+    ::-webkit-scrollbar {
+         width: 0.5rem;
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: ${({ theme }) => theme.COLORS.PINK};
+        outline: 1px solid slategrey;
+    }
+`;

@@ -22,6 +22,15 @@ export const Content = styled.div`
     margin: 0 106px;
 
     padding-right: 16px;
+
+    > .notes {
+      height: 65vh;
+      overflow-y: auto;
+    }
+
+    > .notes > button:last-child {
+      margin-bottom: 0;
+    }
   }
 
   > div {
@@ -63,17 +72,6 @@ export const Content = styled.div`
     flex-direction: column;
 
     margin-bottom: 24px;
-
-    overflow-y: auto;
-
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: ${({ theme }) => theme.COLORS.PINK};
-      border-radius: 8px;
-    }
 
     > span {
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};

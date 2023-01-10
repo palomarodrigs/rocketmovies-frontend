@@ -40,18 +40,6 @@ export function Home() {
                 ],
               }}
             />
-            <MovieNote
-              data={{
-                title: "Interstellar",
-                rating: 4,
-                description:
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum",
-                tags: [
-                  { id: "1", name: "Science Fiction" },
-                  { id: "2", name: "Drama" },
-                ],
-              }}
-            />
           </div>
         </main>
       </Content>
