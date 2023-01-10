@@ -11,14 +11,22 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   > div {
-    margin: 40px 123px;
+    margin: 40px 140px;
+    /* padding: 1rem; */
+
     grid-area: "header";
 
-    button {
+    a {
       display: flex;
       align-items: center;
 
       margin-bottom: 24px;
+
+      color: ${({ theme }) => theme.COLORS.PINK};
+
+      svg {
+        margin-right: 8px;
+      }
     }
 
     h1 {

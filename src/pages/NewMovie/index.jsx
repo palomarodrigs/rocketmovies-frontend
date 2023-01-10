@@ -1,9 +1,9 @@
 import { Container, Form } from "./styles";
+import { Link } from "react-router-dom";
 
 import { FiArrowLeft } from "react-icons/fi";
 
 import { Header } from "../../components/Header";
-import { ButtonText } from "../../components/ButtonText";
 import { Input } from "../../components/Input";
 import { TextArea } from "../../components/TextArea";
 import { Section } from "../../components/Section";
@@ -16,7 +16,10 @@ export function NewMovie() {
       <Header />
       <Form>
         <div>
-          <ButtonText title="Back" icon={FiArrowLeft} />
+          <Link to="/">
+            <FiArrowLeft size={20} />
+            Back
+          </Link>
 
           <h1>New movie</h1>
         </div>

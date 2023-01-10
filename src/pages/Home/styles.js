@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   width: 100%;
@@ -14,56 +15,34 @@ export const Content = styled.div`
   grid-area: content;
   width: 100%;
 
-  > main {
+  > .title {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    /* margin: 0px 106px; */
-    margin: 0 106px;
-
-    padding-right: 16px;
-
-    > .notes {
-      height: 65vh;
-      overflow-y: auto;
-    }
-
-    > .notes > button:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  > div {
-    display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 0 106px 40px;
 
-    h1 {
+    margin: 50px 123px 40px 123px;
+
+    > h1 {
       font-weight: 400;
       font-size: 32px;
       line-height: 42px;
 
-      margin-top: 50px;
+      text-align: center;
+
       color: ${({ theme }) => theme.COLORS.TITLE};
     }
+  }
 
-    > button:nth-child(2) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  > main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
-      width: 200px;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 21px;
+    overflow-y: auto;
 
-      margin-top: 47px;
-      margin-right: 15px;
-
-      > svg {
-        margin-right: 8px;
-      }
-    }
+    padding: 1rem;
+    margin: 0 106px;
+    padding-right: 16px;
   }
 
   > .notes:nth-child(3) {
@@ -71,7 +50,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 
     > span {
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
@@ -83,4 +62,24 @@ export const Content = styled.div`
   }
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_BLACK};
+`;
+
+export const NewMovie = styled(Link)`
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
 `;

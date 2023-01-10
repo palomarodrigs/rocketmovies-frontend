@@ -1,5 +1,5 @@
 import { FiPlus } from "react-icons/fi";
-import { Container, Content } from "./styles";
+import { Container, Content, NewMovie } from "./styles";
 
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
@@ -10,12 +10,50 @@ export function Home() {
     <Container>
       <Header />
       <Content>
-        <div>
+        <div className="title">
           <h1>My movies</h1>
-          <Button title="Add movie" icon={FiPlus} />
+          <NewMovie to="/newmovie">
+            <Button title="Add movie" icon={FiPlus} />
+          </NewMovie>
         </div>
         <main>
           <div className="notes">
+            <MovieNote
+              data={{
+                title: "Interstellar",
+                rating: 2,
+                description:
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum ",
+                tags: [
+                  { id: "1", name: "Science Fiction" },
+                  { id: "2", name: "Drama" },
+                ],
+              }}
+            />
+            <MovieNote
+              data={{
+                title: "Interstellar",
+                rating: 2,
+                description:
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum ",
+                tags: [
+                  { id: "1", name: "Science Fiction" },
+                  { id: "2", name: "Drama" },
+                ],
+              }}
+            />
+            <MovieNote
+              data={{
+                title: "Interstellar",
+                rating: 2,
+                description:
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum ",
+                tags: [
+                  { id: "1", name: "Science Fiction" },
+                  { id: "2", name: "Drama" },
+                ],
+              }}
+            />
             <MovieNote
               data={{
                 title: "Interstellar",
