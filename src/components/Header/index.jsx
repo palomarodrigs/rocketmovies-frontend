@@ -6,8 +6,15 @@ import { Logout } from "../Logout";
 
 import { Link } from "react-router-dom";
 
+import { api } from "../../services/api";
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
+
 export function Header() {
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
+
+  const avatarURL = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
 
   return (
     <Container>
@@ -18,13 +25,14 @@ export function Header() {
         <Input placeholder="Search by title" />
       </div>
       <div>
-        <Profile to="/profile">
+        <Profile>
           <div>
-            <strong>Paloma Rodrigues</strong>
+            <Link to="/profile">{user.name}</Link>
+            {/* <strong>{user.name}</strong> */}
+            <Logout onClick={signOut} title="exit" />
           </div>
-          <img src="https://github.com/palomarodrigs.png" alt="User image" />
+          <img to="/profile" src={avatarURL} alt={user.name} />
         </Profile>
-        <Logout onClick={signOut} title="exit" />
       </div>
     </Container>
   );
