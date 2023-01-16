@@ -8,15 +8,6 @@ export const Container = styled.div`
   grid-template-rows: 116px auto;
   grid-template-areas: "header" "content";
 
-  main::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  main::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS.PINK};
-    border-radius: 20px;
-  }
-
   > main {
     grid-area: content;
     max-width: 1366px;
@@ -26,9 +17,15 @@ export const Container = styled.div`
 
     margin: 40px auto 56px;
 
-    button {
+    a {
       display: flex;
       align-items: center;
+      font-size: 16px;
+      color: ${({ theme }) => theme.COLORS.PINK};
+
+      svg {
+        margin-right: 8px;
+      }
     }
 
     > div:nth-child(2) {

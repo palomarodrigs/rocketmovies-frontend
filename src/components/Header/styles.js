@@ -21,7 +21,7 @@ export const Container = styled.header`
   a,
   h1 {
     color: ${({ theme }) => theme.COLORS.PINK};
-    margin: 10px 0;
+    margin: -17px 0;
     font-size: 24px;
   }
 
@@ -31,6 +31,10 @@ export const Container = styled.header`
     input {
       width: 630px;
     }
+  }
+
+  button {
+    margin-top: 5px;
   }
 `;
 

@@ -1,4 +1,5 @@
 import { FiArrowLeft, FiClock } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 
 import { ButtonText } from "../../components/ButtonText";
@@ -13,7 +14,10 @@ export function MoviePreview() {
 
       <main>
         <div>
-          <ButtonText title="Return" icon={FiArrowLeft} />
+          <Link to="/">
+            <FiArrowLeft size={20} />
+            Return
+          </Link>
         </div>
 
         <div>
