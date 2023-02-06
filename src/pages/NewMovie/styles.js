@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
@@ -6,17 +6,17 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-rows: 116px auto;
-  grid-template-areas: "header" "content";
-`;
+  grid-template-areas: 'header' 'content';
+`
 
 export const Form = styled.form`
   > div {
-    margin: 40px 140px;
+    margin: 40px 123px;
     /* padding: 1rem; */
 
-    grid-area: "header";
+    grid-area: 'header';
 
-    a {
+    button {
       display: flex;
       align-items: center;
 
@@ -24,7 +24,7 @@ export const Form = styled.form`
 
       color: ${({ theme }) => theme.COLORS.PINK};
 
-      svg {
+      > svg {
         margin-right: 8px;
       }
     }
@@ -47,7 +47,7 @@ export const Form = styled.form`
     align-items: flex-start;
 
     overflow-y: auto;
-    margin: 0 123px 40px;
+    margin: 0 105px 40px;
 
     > div:nth-child(1) {
       display: flex;
@@ -92,4 +92,4 @@ export const Form = styled.form`
     font-size: 20px;
     margin-top: 40px;
   }
-`;
+`
