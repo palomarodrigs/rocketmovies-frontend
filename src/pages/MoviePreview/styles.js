@@ -10,17 +10,16 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    max-width: 1366px;
     padding: 0 16px;
 
-    overflow-y: scroll;
-
-    margin: 40px auto 56px;
+    margin: 40px 150px 56px;
 
     > div:nth-child(1) {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      margin-right: 20px;
 
       > button {
         display: flex;
@@ -64,6 +63,9 @@ export const Container = styled.div`
     }
 
     > div:nth-child(3) {
+      display: flex;
+      align-items: center;
+
       > img {
         width: 25px;
         height: 25px;
@@ -87,9 +89,15 @@ export const Container = styled.div`
       }
     }
 
-    p {
-      margin-top: 40px;
-      text-align: justify;
+    > div:nth-child(5) {
+      height: 45vh;
+      padding: 1rem;
+
+      overflow-y: auto;
+
+      p {
+        text-align: justify;
+      }
     }
   }
 `

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
@@ -20,15 +20,17 @@ export const Container = styled.div`
       font-size: 16px;
     }
 
-    a {
+    button {
       display: flex;
       align-items: center;
-      text-decoration: none;
-      font-size: 16px;
+
+      background: none;
+      border: none;
+
       color: ${({ theme }) => theme.COLORS.PINK};
     }
   }
-`;
+`
 
 export const Form = styled.form`
   max-width: 340px;
@@ -37,7 +39,7 @@ export const Form = styled.form`
   > div:nth-child(4) {
     margin-top: 24px;
   }
-`;
+`
 
 export const Avatar = styled.div`
   position: relative;
@@ -83,4 +85,4 @@ export const Avatar = styled.div`
       color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     }
   }
-`;
+`

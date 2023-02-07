@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { api } from '../../services/api'
 
 import { Header } from '../../components/Header'
+import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 import { MovieNote } from '../../components/MovieNote'
 
@@ -31,7 +32,15 @@ export function Home() {
 
   return (
     <Container>
-      <Header onChange={e => setSearch(e.target.value)} />
+      <Header>
+        <div className='search'>
+          <Input
+            placeholder='Search by title'
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+          />
+        </div>
+      </Header>
       <Content>
         <div className='title'>
           <h1>My movies</h1>

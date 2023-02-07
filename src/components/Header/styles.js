@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.header`
   grid-area: header;
@@ -16,7 +16,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
 
-  padding: 24px 123px;
+  padding: 24px 170px;
 
   header a,
   h1 {
@@ -24,15 +24,7 @@ export const Container = styled.header`
     margin: -17px 0;
     font-size: 24px;
   }
-
-  > div {
-    margin: 10px 0;
-
-    input {
-      width: 630px;
-    }
-  }
-`;
+`
 
 export const Profile = styled.div`
   display: flex;
@@ -73,4 +65,4 @@ export const Profile = styled.div`
     margin-left: 18px;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
-`;
+`

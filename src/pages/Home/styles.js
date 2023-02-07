@@ -6,21 +6,30 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  /* grid-template-columns: auto; */
   grid-template-rows: 116px 1000px;
   grid-template-areas: 'header' 'content';
+
+  .search {
+    input {
+      width: 600px;
+      /* background-color: red; */
+    }
+  }
 `
 
 export const Content = styled.div`
   grid-area: content;
   width: 100%;
 
+  > header {
+  }
+
   > .title {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    margin: 50px 123px 40px 123px;
+    margin: 40px 170px;
 
     > h1 {
       font-weight: 400;
@@ -37,11 +46,12 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: 24px;
+    height: 60vh;
 
-    /* overflow-y: auto; */
+    overflow-y: scroll;
 
     padding: 1rem;
-    margin: 0 106px;
+    margin: 0 150px;
     padding-right: 16px;
   }
 
@@ -50,7 +60,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
 
-    /* margin-bottom: 24px; */
+    margin-bottom: 24px;
 
     > span {
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};

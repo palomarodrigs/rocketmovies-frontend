@@ -26,12 +26,16 @@ export function MoviePreview() {
     user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
   )
 
+  function handleBack() {
+    navigate(-1)
+  }
+
   async function handleRemoveMovie() {
     const confirm = window.confirm('Do you really want to remove the note?')
 
     if (confirm) {
       await api.delete(`/notes/${params.id}`)
-      navigate(-1)
+      handleBack()
     }
   }
 
@@ -77,7 +81,9 @@ export function MoviePreview() {
             </div>
           )}
 
-          <p>{data.description}</p>
+          <div className='description'>
+            <p>{data.description}</p>
+          </div>
         </main>
       )}
     </Container>
