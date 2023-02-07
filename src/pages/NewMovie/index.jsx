@@ -57,13 +57,15 @@ export function NewMovie() {
     handleBack()
   }
 
-  async function handleRemoveNote() {
-    const confirm = window.confirm('Do you really want to remove the note?')
+  function handleClear() {
+    setTitle('')
+    setRating('')
+    setDescription('')
+    setTags([])
 
-    if (confirm) {
-      await api.delete(`/notes/${params.id}`)
-      navigate(-1)
-    }
+    document.querySelectorAll('input').forEach(input => (input.value = ''))
+
+    document.querySelectorAll('textarea').forEach(textarea => (textarea.value = ''))
   }
 
   function handleAddTag() {
@@ -112,7 +114,7 @@ export function NewMovie() {
           </Section>
 
           <div className='btns'>
-            <Button title='Delete movie' onClick={handleRemoveNote} />
+            <Button title='Clear' onClick={handleClear} />
             <Button title='Save changes' onClick={handleNewNote} />
           </div>
         </main>

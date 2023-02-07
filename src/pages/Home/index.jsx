@@ -1,86 +1,52 @@
-import { FiPlus } from "react-icons/fi";
-import { Container, Content, NewMovie } from "./styles";
+import { FiPlus } from 'react-icons/fi'
+import { Container, Content, NewMovie } from './styles'
 
-import { Header } from "../../components/Header";
-import { Button } from "../../components/Button";
-import { MovieNote } from "../../components/MovieNote";
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+import { api } from '../../services/api'
+
+import { Header } from '../../components/Header'
+import { Button } from '../../components/Button'
+import { MovieNote } from '../../components/MovieNote'
 
 export function Home() {
+  const [notes, setNotes] = useState([])
+  const [search, setSearch] = useState('')
+
+  const navigate = useNavigate()
+
+  function handlePreview(id) {
+    navigate(`moviepreview/${id}`)
+  }
+
+  useEffect(() => {
+    async function fetchNotes() {
+      const response = await api.get(`/notes?title=${search}`)
+      setNotes(response.data)
+    }
+
+    fetchNotes()
+  }, [search])
+
   return (
     <Container>
-      <Header />
+      <Header onChange={e => setSearch(e.target.value)} />
       <Content>
-        <div className="title">
+        <div className='title'>
           <h1>My movies</h1>
-          <NewMovie to="/newmovie">
-            <Button title="Add movie" icon={FiPlus} />
+          <NewMovie to='/newmovie'>
+            <Button title='Add movie' icon={FiPlus} />
           </NewMovie>
         </div>
         <main>
-          <div className="notes">
-            <MovieNote
-              data={{
-                title: "Interstellar",
-                rating: 2,
-                description:
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum ",
-                tags: [
-                  { id: "1", name: "Science Fiction" },
-                  { id: "2", name: "Drama" },
-                ],
-              }}
-            />
-            <MovieNote
-              data={{
-                title: "Interstellar",
-                rating: 2,
-                description:
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum ",
-                tags: [
-                  { id: "1", name: "Science Fiction" },
-                  { id: "2", name: "Drama" },
-                ],
-              }}
-            />
-            <MovieNote
-              data={{
-                title: "Interstellar",
-                rating: 2,
-                description:
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum ",
-                tags: [
-                  { id: "1", name: "Science Fiction" },
-                  { id: "2", name: "Drama" },
-                ],
-              }}
-            />
-            <MovieNote
-              data={{
-                title: "Interstellar",
-                rating: 2,
-                description:
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum ",
-                tags: [
-                  { id: "1", name: "Science Fiction" },
-                  { id: "2", name: "Drama" },
-                ],
-              }}
-            />
-            <MovieNote
-              data={{
-                title: "Interstellar",
-                rating: 3,
-                description:
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore officia nemo quam debitis facere sed eligendi nihil adipisci amet eum beatae vitae, deserunt voluptatum iste, alias sunt voluptate temporibus. Lorem ipsum",
-                tags: [
-                  { id: "1", name: "Science Fiction" },
-                  { id: "2", name: "Drama" },
-                ],
-              }}
-            />
+          <div className='notes'>
+            {notes.map(note => (
+              <MovieNote key={String(note.id)} data={note} onClick={() => handlePreview(note.id)} />
+            ))}
           </div>
         </main>
       </Content>
     </Container>
-  );
+  )
 }

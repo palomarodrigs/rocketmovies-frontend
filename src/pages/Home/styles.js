@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   width: 100%;
@@ -8,8 +8,8 @@ export const Container = styled.div`
   display: grid;
   /* grid-template-columns: auto; */
   grid-template-rows: 116px 1000px;
-  grid-template-areas: "header" "content";
-`;
+  grid-template-areas: 'header' 'content';
+`
 
 export const Content = styled.div`
   grid-area: content;
@@ -38,7 +38,7 @@ export const Content = styled.div`
     flex-direction: column;
     gap: 24px;
 
-    overflow-y: auto;
+    /* overflow-y: auto; */
 
     padding: 1rem;
     margin: 0 106px;
@@ -62,7 +62,7 @@ export const Content = styled.div`
   }
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_BLACK};
-`;
+`
 
 export const NewMovie = styled(Link)`
   width: 200px;
@@ -82,4 +82,4 @@ export const NewMovie = styled(Link)`
       margin-right: 8px;
     }
   }
-`;
+`

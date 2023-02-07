@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
     * {
@@ -45,4 +45,4 @@ export default createGlobalStyle`
         background-color: ${({ theme }) => theme.COLORS.PINK};
         outline: 1px solid slategrey;
     }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-rows: 116px auto;
-  grid-template-areas: "header" "content";
+  grid-template-areas: 'header' 'content';
 
   > main {
     grid-area: content;
@@ -16,6 +16,17 @@ export const Container = styled.div`
     overflow-y: scroll;
 
     margin: 40px auto 56px;
+
+    > div:nth-child(1) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > button {
+        display: flex;
+        color: ${({ theme }) => theme.COLORS.PINK};
+      }
+    }
 
     a {
       display: flex;
@@ -54,9 +65,13 @@ export const Container = styled.div`
 
     > div:nth-child(3) {
       > img {
-        width: 16px;
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
         border-radius: 50%;
         margin-right: 8px;
+
+        border: ${({ theme }) => theme.COLORS.BORDER};
       }
 
       > svg {
@@ -77,4 +92,4 @@ export const Container = styled.div`
       text-align: justify;
     }
   }
-`;
+`
