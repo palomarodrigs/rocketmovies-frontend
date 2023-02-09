@@ -10,6 +10,7 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
+
     padding: 0 16px;
 
     margin: 40px 150px 56px;
@@ -90,12 +91,15 @@ export const Container = styled.div`
     }
 
     > div:nth-child(5) {
+      max-width: 1366px;
+
       height: 45vh;
       padding: 1rem;
 
       overflow-y: auto;
 
       p {
+        word-wrap: break-word;
         text-align: justify;
       }
     }

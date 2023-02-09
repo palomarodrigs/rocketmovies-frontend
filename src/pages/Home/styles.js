@@ -6,35 +6,34 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 116px 1000px;
+  grid-template-rows: 116px 1366px;
   grid-template-areas: 'header' 'content';
 
   .search {
     input {
       width: 600px;
-      /* background-color: red; */
     }
   }
 `
 
 export const Content = styled.div`
   grid-area: content;
-  width: 100%;
-
-  > header {
-  }
+  max-width: 1366px;
 
   > .title {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    margin: 40px 170px;
+    margin: 40px 230px;
 
     > h1 {
       font-weight: 400;
       font-size: 32px;
       line-height: 42px;
+
+      margin-left: 20px;
 
       text-align: center;
 
@@ -43,6 +42,8 @@ export const Content = styled.div`
   }
 
   > main {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -51,15 +52,13 @@ export const Content = styled.div`
     overflow-y: scroll;
 
     padding: 1rem;
-    margin: 0 150px;
+    margin: auto 230px;
     padding-right: 16px;
   }
 
-  > .notes:nth-child(3) {
-    width: 100%;
+  > .notes {
     display: flex;
     flex-direction: column;
-
     margin-bottom: 24px;
 
     > span {
@@ -78,7 +77,6 @@ export const NewMovie = styled(Link)`
   width: 200px;
   display: flex;
   align-items: center;
-  justify-content: center;
 
   button {
     display: flex;

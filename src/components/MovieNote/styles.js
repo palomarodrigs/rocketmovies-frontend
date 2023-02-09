@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.button`
   display: flex;
@@ -36,6 +36,9 @@ export const Container = styled.button`
   > p {
     width: 100%;
     text-align: justify;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 
     margin-top: 15px;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
@@ -47,4 +50,4 @@ export const Container = styled.button`
 
     margin-top: 15px;
   }
-`;
+`
