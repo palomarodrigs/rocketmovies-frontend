@@ -16,12 +16,11 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
 
-  padding: 24px 170px;
+  padding: 24px 150px;
 
   header a,
   h1 {
     color: ${({ theme }) => theme.COLORS.PINK};
-    margin: -17px 0;
     font-size: 24px;
   }
 `

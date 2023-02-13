@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   > div {
-    margin: 40px 170px;
+    margin: 40px 140px;
     /* padding: 1rem; */
 
     grid-area: 'header';
@@ -37,7 +37,7 @@ export const Form = styled.form`
 
   main {
     grid-area: content;
-    width: 1137px;
+    /* width: 1137px; */
     height: 57vh;
 
     padding: 1rem;
@@ -47,7 +47,7 @@ export const Form = styled.form`
     align-items: flex-start;
 
     overflow-y: auto;
-    margin: 0 150px;
+    margin: 0 130px;
 
     > div:nth-child(1) {
       display: flex;

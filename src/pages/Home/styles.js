@@ -18,22 +18,21 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   grid-area: content;
-  max-width: 1366px;
 
   > .title {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    margin: 40px 230px;
+    margin: 45px 150px;
 
     > h1 {
       font-weight: 400;
       font-size: 32px;
       line-height: 42px;
 
-      margin-left: 20px;
+      /* margin-left: 10px; */
 
       text-align: center;
 
@@ -42,21 +41,21 @@ export const Content = styled.div`
   }
 
   > main {
-    width: 100%;
+    /* width: 1280px; */
 
     display: flex;
     flex-direction: column;
     gap: 24px;
-    height: 60vh;
+    height: 58vh;
 
-    overflow-y: scroll;
+    overflow-y: auto;
 
-    padding: 1rem;
-    margin: auto 230px;
-    padding-right: 16px;
+    padding: 0.5rem;
+    margin: 32px 140px;
   }
 
   > .notes {
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 24px;

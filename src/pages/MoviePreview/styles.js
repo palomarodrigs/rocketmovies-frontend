@@ -13,7 +13,7 @@ export const Container = styled.div`
 
     padding: 0 16px;
 
-    margin: 40px 150px 56px;
+    margin: 40px 130px 56px;
 
     > div:nth-child(1) {
       display: flex;
